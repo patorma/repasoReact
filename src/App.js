@@ -7,7 +7,10 @@ function App() {
   const encenderApagar = () => {
     // actualizar el estado con setStateCar
     // con ! le digo que mando lo contrario del estado
-    setStateCar(!stateCar);
+    //setStateCar(!stateCar);
+    // esto seria si pasamos esta funcion a otro componente y ese componente
+    // no tuviera acceso al estado actual osea a la funcion que cambia el estado
+    setStateCar((preValue) => !preValue); // mandamos lo contrario del valor actual
   };
   return (
     <div className="App">
